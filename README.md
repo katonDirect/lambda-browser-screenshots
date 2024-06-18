@@ -58,8 +58,8 @@ The parameters that can be specified are:
 
 In example used existing production funcion used in progress report
 
+https://bx6smnz5xkix4rft67xkifospm0iqkeq.lambda-url.us-east-1.on.aws?url=https://www.google.com
+
 ```shell script
-$ curl -H "Accept: image/png" \
-  https://bx6smnz5xkix4rft67xkifospm0iqkeq.lambda-url.us-east-1.on.aws/default/browser-shot\?url\=https://www.example.com\&width\=800\&height\=600 \
-  > example.com.png
+$ curl -H "Accept: image/png"  https://bx6smnz5xkix4rft67xkifospm0iqkeq.lambda-url.us-east-1.on.aws\?url\=https://www.example.com\&width\=800\&height\=600 > example.com.png
 ```
