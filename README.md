@@ -1,6 +1,6 @@
 # Lambda Browser Screenshots
 
-This is fork of github project https://github.com/beneboy/lambda-browser-screenshots but this is old code which works with Node 14.x, in June 2024 Node 14.x is not supported by AWS. For Node 18.x modifications done base on https://konarskis.substack.com/p/puppeteer-aws-lambda?triedRedirect=true.
+This is fork of github project https://github.com/beneboy/lambda-browser-screenshots but this is old code which works with Node 14.x, in June 2024 Node 14.x is not supported by AWS. For Node 20.x modifications done base on https://konarskis.substack.com/p/puppeteer-aws-lambda?triedRedirect=true.
 
 This lambda is used in PowerPoint progress report generator.
 
@@ -34,7 +34,7 @@ Now upload the `function.zip` to your Lambda in AWS.
 
 ### AWS Setup
 
-Supports **Node 18.x** Lambda runtime.
+Supports **Node 18.x, Node 20.x** Lambda runtime.
 
 You should set up a REST API as the trigger to the function. Make sure that you add `image/png` as a 
 **Binary media type** in the REST API configuration, otherwise you'll get back base-64 encoded data.
