@@ -1,5 +1,9 @@
 # Lambda Browser Screenshots
 
+This is fork of github project https://github.com/beneboy/lambda-browser-screenshots but this is old code which works with Node 14.x, in June 2024 Node 14.x is not supported by AWS. For Node 18.x modifications done base on https://konarskis.substack.com/p/puppeteer-aws-lambda?triedRedirect=true.
+
+This lambda is used in PowerPoint progress report generator.
+
 [AWS Lambda](https://aws.amazon.com/lambda/) function that gives a REST API that returns a PNG screenshot of a given 
 URL. Small and easy to deploy without having to worry about S3.
 
@@ -30,7 +34,7 @@ Now upload the `function.zip` to your Lambda in AWS.
 
 ### AWS Setup
 
-Supports **Node 14.x** Lambda runtime.
+Supports **Node 18.x** Lambda runtime.
 
 You should set up a REST API as the trigger to the function. Make sure that you add `image/png` as a 
 **Binary media type** in the REST API configuration, otherwise you'll get back base-64 encoded data.
@@ -52,17 +56,10 @@ The parameters that can be specified are:
 
 #### Example Using Curl
 
+In example used existing production funcion used in progress report
+
 ```shell script
 $ curl -H "Accept: image/png" \
-  https://FUNCTION_ID.execute-api.REGION.amazonaws.com/default/browser-shot\?url\=https://www.example.com\&width\=800\&height\=600 \
+  https://bx6smnz5xkix4rft67xkifospm0iqkeq.lambda-url.us-east-1.on.aws/default/browser-shot\?url\=https://www.example.com\&width\=800\&height\=600 \
   > example.com.png
 ```
-
-## Why?
-
-There's a ton of example code out there for doing this, but it can be dependency hell to get it working. Different 
-versions of Puppeteer and Chromium have bugs to deal with and don't work right.
-
-This is a ready-to-go solution that you can build and upload to AWS Lambda without having to waste time trying to sort
-out dependencies. When packaged it's less than 50MB including the `node_modules` you can easily upload to Lambda without
-having to go via S3.
