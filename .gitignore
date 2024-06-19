@@ -1,2 +1,7 @@
 /src/node_modules/
 .idea
+.vscode
+test_image.png
+test_response.json
+
+

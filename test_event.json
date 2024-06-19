@@ -1,0 +1,7 @@
+{
+  "queryStringParameters": {
+    "url": "https://example.com",
+    "width": "880",
+    "height": "600"
+  }
+}

@@ -25,7 +25,7 @@ Or if you don't have `make`, run the build steps manually:
 
 ```shell script
 $ cd src
-$ npm install --production
+$ npm install --legacy-peer-deps
 $ zip -r ../function.zip .
 ```
 Either way, you should get an output file `function.zip`. 
@@ -63,3 +63,20 @@ https://dmxuxud6wv36d2lecwoncs7cru0djzmt.lambda-url.us-east-1.on.aws?url=https:/
 ```shell script
 $ curl -H "Accept: image/png"  https://dmxuxud6wv36d2lecwoncs7cru0djzmt.lambda-url.us-east-1.on.aws\?url\=https://www.example.com\&width\=800\&height\=600 > example.com.png
 ```
+
+#### Testing 
+Testing on the development environment
+
+```shell script
+$ npm install --save-dev @sparticuz/chromium-min
+```
+Install AWS SAM CLI: If you don't already have one, and run scripts in test.bat
+
+```shell script
+$ sam local invoke MyLambdaFunction --event test_event.json > test_response.json
+$ node get_image_from_test_response.js
+```
+Response from lambda function is in test_response.json
+base on body in this response is generated test_image.png
+In file test_event.json are parameters for lambda function, you can change url to some creative preview link to test how screenshot will look
+

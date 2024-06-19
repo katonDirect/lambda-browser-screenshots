@@ -11,5 +11,8 @@
   "dependencies": {
     "chrome-aws-lambda": "^10.1.0",
     "puppeteer-core": "^10.1.0"
+  },
+  "devDependencies": {
+    "@sparticuz/chromium-min": "^123.0.1"
   }
 }
