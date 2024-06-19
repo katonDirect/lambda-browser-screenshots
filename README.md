@@ -54,12 +54,12 @@ The parameters that can be specified are:
 - `width` (optional): The width of the browser window, defaults to `1280`
 - `height` (optional): The height of the browser window, defaults to `800`
 
-#### Example Using Curl
+#### Example
 
 In example used existing production funcion used in progress report
 
-https://bx6smnz5xkix4rft67xkifospm0iqkeq.lambda-url.us-east-1.on.aws?url=https://www.google.com
+https://dmxuxud6wv36d2lecwoncs7cru0djzmt.lambda-url.us-east-1.on.aws?url=https://www.google.com
 
 ```shell script
-$ curl -H "Accept: image/png"  https://bx6smnz5xkix4rft67xkifospm0iqkeq.lambda-url.us-east-1.on.aws\?url\=https://www.example.com\&width\=800\&height\=600 > example.com.png
+$ curl -H "Accept: image/png"  https://dmxuxud6wv36d2lecwoncs7cru0djzmt.lambda-url.us-east-1.on.aws\?url\=https://www.example.com\&width\=800\&height\=600 > example.com.png
 ```
